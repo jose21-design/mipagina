@@ -1,100 +1,165 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('app')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<!-- Main -->
+<main id="main">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/t.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/x.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/s.jpg" class="d-block w-100" alt="...">
+          </div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+          <div class="overlay">
+              <div class="container">
+                  <div class="row align-items-center">
 
-            .full-height {
-                height: 100vh;
-            }
+                     <div class="col-md-6 offset-md-3 text-md-rigth text-center">
+                        <br><h1>AxiaStyle</h1>
+                        <p class="d-none d-md-block">La tienda de snakers y ropa en línea, descubre todos los estilos de ropa y modelos de calzado que tenemos para ti.
+                          Luce el estilo urbano de nuestro calzado, obtén el calzado que siempre quisiste de tu súper estrella favorita y juega como él
+                          Ropa adecuada a tu disciplina deportiva, cómoda, de la mejor marca y calidad.
+                        </p>
+                        <a href="" class="btn btn-light">Quiero colaborar</a>
+                        <button class="btn btn-tecnoeduca">Más información</button>
+                    </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+                  </div>
+              </div>
+          </div>
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
-    </body>
-</html>
+      </div>
+</main>
+<!-- EndMain -->
+
+<!-- Estilos -->
+<section id="estilos">
+  <div class="row">
+    <div class="col text-center text-uppercase">
+        <small>Conoce nuestra gran variedad de</small><h2>Estilos</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-3 col-med-12">
+      <div class="card" style="width: 18rem;">
+        <img src="images/si.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-subtitle mb-2 text-muted">Adidas Entrap</h5>
+          <p class="card-text">Este modelo es de gran calidad y es reciente</p>
+          <a href="#" class="card-link">Más...</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 col-med-12">
+      <div class="card" style="width: 18rem;">
+        <img src="images/leb.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-subtitle mb-2 text-muted">LeBron XV</h5>
+          <p class="card-text">La línea deportiva del rey LeBron</p>
+          <a href="#" class="card-link">Más...</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 col-med-12">
+      <div class="card" style="width: 18rem;">
+        <img src="images/ret.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-subtitle mb-2 text-muted">Puma Breaker</h5>
+          <p class="card-text">Ideales para estilo casual y moderno</p>
+          <a href="#" class="card-link">Más...</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 col-med-12">
+      <div class="card" style="width: 18rem;">
+        <img src="images/er.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-subtitle mb-2 text-muted">Nike Legacy</h5>
+          <p class="card-text">Muy pocos tienen el honor de poseer este par</p>
+          <a href="#" class="card-link">Más...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center text-uppercase">
+        <h6>Descuento de 10% a partir de $2000</h6>
+    </div>
+ </div>
+</section>
+<!-- End/estilos -->
+
+<!-- Modelo -->
+<section id="modelo">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 pt-4 pb-4">
+        <h2>Selección de modelos Noviembre 2021</h2>
+        <p>
+          Sí te apasiona el modelaje y tienes algo de experiencia, anímate a participar en el proceso de selección.
+          Previamente es necesario llenar el formulario con los datos que se te piden y adjuntar algunas fotografías donde poses.
+        </p>
+
+        <a href="#" class="btn btn-success">Registrarme</a>
+      </div>
+      <div class="col-lg-4 col-12 pl-0 pr-0">
+        <img src="images/d.jpg" alt="">
+      </div>
+      <div class="col-lg-4 col-12 pl-0 pr-0">
+        <img src="images/a.jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Modelo -->
+
+ <!-- Sugerencias -->
+ <section id="sugerencias" class="pt-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <small class="text-uppercase"> Estás buscando trabajo </small>
+        <h2>ÚNETE A NOSOTROS</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+
+        <form>
+          <div class="form-row">
+            <div class="col-12 col-md-6 form-group">
+              <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col-12 col-md-6 form-group">
+              <input type="text" class="form-control" placeholder="Apellidos">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col form-group">
+              <textarea name="description" class="form-control"></textarea>
+              <small>Incluye la descripción de tu situación </small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col form-group">
+              <button type="button" class="btn btn-tecnoeduca btn-block">Enviar</button>
+            </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Sé maestro -->
+    
+@endsection
